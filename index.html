@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
@@ -36,7 +40,7 @@
               <a href="#features"> Features </a>
             </li>
             <li>
-              <a href="#pricing"> Pricing </a>
+              <a href="#reviews"> Reviews </a>
             </li>
             <li>
               <a href="#blog"> Blog </a>
@@ -130,5 +134,25 @@
         <div class="features_main"></div>
       </div>
     </section>
+
+    <section class="reviews" id="reviews">
+      <div class="reviews_content container">
+        <div class="reviews_header">
+          <span class="title">What our clients say </span>
+          <span class="sub_title"
+            >Rmet facilisi arcu odio urna aenean erat. Pellentesque in vitae
+            lobortis orci tincidunt facilisis. Pulvinar lacus ultricies turpis
+            urna sapien.</span
+          >
+        </div>
+      </div>
+
+      <div class="reviews_main container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper"></div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
 </html>
