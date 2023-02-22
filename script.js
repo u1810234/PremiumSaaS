@@ -166,7 +166,7 @@ let swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   },
   breakpoints: {
-    425: {
+    0: {
       slidesPerView: 1,
     },
     768: {
