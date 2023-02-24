@@ -246,3 +246,17 @@ posts.forEach((post) => {
 
   blog_posts.append(post_element);
 });
+
+window.addEventListener("scroll", () => {
+  let sections = document.querySelectorAll(".section");
+
+  sections.forEach((section) => {
+    let windowHeight = window.innerHeight;
+    let sectionTop = section.getBoundingClientRect().top;
+    let revealPoint = 50;
+
+    if (sectionTop < windowHeight - revealPoint) {
+      section.classList.add("active");
+    }
+  });
+});

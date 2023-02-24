@@ -517,6 +517,18 @@ ul li a:hover {
   text-align: center;
 }
 
+.section {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 450ms ease;
+}
+
+.section.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 @media screen and (max-width: 991px) {
   .nav_container,
   .button_demo_container {
