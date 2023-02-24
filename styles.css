@@ -504,6 +504,19 @@ ul li a:hover {
   align-items: center;
 }
 
+.footer {
+  background: rgb(13, 12, 53);
+  background: radial-gradient(
+    circle,
+    rgba(13, 12, 53, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.footer_content {
+  text-align: center;
+}
+
 @media screen and (max-width: 991px) {
   .nav_container,
   .button_demo_container {
@@ -606,5 +619,9 @@ ul li a:hover {
   .blog_title {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  .post {
+    padding: 12px;
   }
 }
