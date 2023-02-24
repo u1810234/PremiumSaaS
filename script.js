@@ -108,8 +108,6 @@ const reviews = [
   },
 ];
 
-//             <div class="swiper-slide">Slide 1</div>
-
 const swiper_wrapper = document.querySelector(".swiper-wrapper");
 
 reviews.forEach((review) => {
@@ -178,4 +176,73 @@ let swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
     },
   },
+});
+
+const posts = [
+  {
+    image: "post_1.png",
+    title: "Product Mail is taking on Gmail by betting on privacy",
+    description:
+      "Ramet consectetur. Est porttitor mattis pharetra sit id viverra. Vivamus mauris augue pharetra cras turpis faucibus elit urna.",
+    date: "February 15, 2023",
+  },
+  {
+    image: "post_2.png",
+    title: "Product Wants You To Sign Out Of Google Workspace Forever",
+    description:
+      "Ramet consectetur. Est porttitor mattis pharetra sit id viverra. Vivamus mauris augue pharetra cras turpis faucibus elit urna.",
+    date: "February 8, 2023",
+  },
+  {
+    image: "post_3.png",
+    title: "Product - The Best Email Encryption Services of 2022",
+    description:
+      "Ramet consectetur. Est porttitor mattis pharetra sit id viverra. Vivamus mauris augue pharetra cras turpis faucibus elit urna.",
+    date: "February 1, 2023",
+  },
+];
+
+const blog_posts = document.querySelector(".blog_posts");
+
+posts.forEach((post) => {
+  const post_element = document.createElement("div");
+  post_element.classList.add("post");
+
+  const post_image = document.createElement("img");
+  post_image.classList.add("post_image");
+  post_image.alt = "Post Image";
+  post_image.src = `./assets/posts/${post.image}`;
+
+  const post_title = document.createElement("a");
+  post_title.classList.add("post_title");
+  post_title.innerHTML = post.title;
+  post_title.href = "#";
+
+  const post_description = document.createElement("span");
+  post_description.classList.add("post_description");
+  post_description.innerHTML = post.description;
+
+  const post_main = document.createElement("div");
+  post_main.classList.add("post_main");
+  post_main.append(post_title, post_description);
+
+  const post_divider = document.createElement("div");
+  post_divider.classList.add("post_divider");
+
+  const post_bottom = document.createElement("div");
+  post_bottom.classList.add("post_bottom");
+
+  const post_date = document.createElement("span");
+  post_date.classList.add("post_date");
+  post_date.innerHTML = post.date;
+
+  const post_button = document.createElement("button");
+  post_button.classList.add("post_button", "btn", "btn_text");
+  post_button.innerHTML = "Read more";
+
+  post_bottom.append(post_date, post_button);
+
+  post_element.append(post_image, post_main, post_divider, post_bottom);
+
+  blog_posts.append(post_element);
 });
