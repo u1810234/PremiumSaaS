@@ -1,9 +1,17 @@
 const mobile_links_toggle = document.querySelector(".mobile_links_toggle");
 const mobile_links = document.querySelector(".mobile_links");
+const links = document.querySelectorAll(".nav_link");
 
 mobile_links_toggle.addEventListener("click", () => {
   mobile_links_toggle.classList.toggle("active");
   mobile_links.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobile_links_toggle.classList.toggle("active");
+    mobile_links.classList.toggle("active");
+  });
 });
 
 const features_main = document.querySelector(".features_main");
